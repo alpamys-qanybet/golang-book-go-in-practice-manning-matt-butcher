@@ -4,6 +4,25 @@
 
 Notes:
 - Go has neither a ternary operator (usually ?:) nor type generics.
-- Multiple return values. Go functions and methods can return multiple values. 
+- Multiple return values. Go functions and methods can return multiple values.
+- The named return variables are available to have values assigned to them.
+When return is called with no values, the current values for the return names are returned.
+- To run func in parallel rather than in order, you use the go keyword.
+This causes main to continue executing immediately. Both func and main execute concurrently.
+func count() {
+    // do stuff
+}
+
+func main() {
+    go count()
+    // do stuff
+}
+
+- channels can be one-directional or bidirectional.
+- a variable is passed from one goroutine to another through a channel.
+This operation works even when goroutines are running in parallel on different processor cores.
+- c <- b // writing to channel
+  a := <-c // reading from channel
+
 
 =======================================================================================================================================================================================================================================================================================================================================================================
