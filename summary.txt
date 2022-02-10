@@ -1,4 +1,7 @@
 1. Into
+- The Go philosophy of simplicity plus extensibility that created a useful language and enables an ecosystem to surround it
+- Features of Go that take advantage of modern hardware, such as goroutines that enable concurrent execution
+- The toolchain accompanying the Go language, including testing, package management, formatting, and documentation
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -24,5 +27,34 @@ This operation works even when goroutines are running in parallel on different p
 - c <- b // writing to channel
   a := <-c // reading from channel
 
+- Using channels and goroutines together provides functionality similar to lightweight threads or internal micro-services that communicate over a type-defined API.
+These can be chained or pieced together by using various techniques.
+
+- Many modern programming languages have package managers, but how many have package management built right in? Go does
+The obvious reason is programmer productivity.
+The second reason is faster compile time.
+Package handling was designed with a compiler in mind.
+It’s one of the reasons the compiler is so fast.
+
+- go get.
+The go get command can accept a path, such as golang.org/x/net/html, to get an individual package or ./... can be used,
+which will walk through the codebase and get any referenced external packages.
+
+- Numerous editors have commands, either built in or through add-on packages, to handle formatting for you. These include Vim, Sublime Text, Eclipse, and many others.
+For example, the Sublime Text package GoSublime updates the formatting of a file when it’s saved.
+
+- ($GOPATH/bin) If you’d like to install binaries to an alternative location, the GOBIN environment variable can be set to that path. This is an optional environment variable.
+
+=======================================================================================================================================================================================================================================================================================================================================================================
+
+2. Solid foundation
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Notes:
+- Designed as a systems language, Go doesn’t provide native support for building windowed applications.
+- The argument and flag handling in the Go standard library is based on Plan 9,
+which has a different style from the systems based on GNU/Linux and Berkeley Software Distribution (BSD),
+such as Mac OS X and FreeBSD, that are in wide use today.
 
 =======================================================================================================================================================================================================================================================================================================================================================================
