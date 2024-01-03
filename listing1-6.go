@@ -18,3 +18,13 @@ func main() {
     fmt.Println("Hello world")
     time.Sleep(time.Millisecond * 5)
 }
+
+
+/*
+0
+1
+Hello world
+2
+3
+4
+*/

@@ -15,3 +15,5 @@ func main() {
     n1, n2 := Names()
     fmt.Println(n1, n2)
 }
+
+// Foo Bar

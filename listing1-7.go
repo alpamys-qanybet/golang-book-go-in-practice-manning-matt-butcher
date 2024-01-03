@@ -16,6 +16,7 @@ func printCount(c chan int) {
 func main() {
     c := make(chan int)
     a := []int{8,6,7,5,3,0,9,-1}
+    // a := []int{8,6,7,-3,5,3,0,9,-1} // it will throw error: 8 6 7 -3 fatal error: all goroutines are asleep - deadlock!
 
     go printCount(c)
 
@@ -26,3 +27,5 @@ func main() {
     time.Sleep(time.Millisecond)
     fmt.Println("End of main")
 }
+
+// 8 6 7 5 3 0 9 -1 End of main
